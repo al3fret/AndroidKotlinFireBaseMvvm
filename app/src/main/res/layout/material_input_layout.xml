@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.InputType" />
+
+        <variable
+            name="text"
+            type="androidx.lifecycle.MutableLiveData&lt;String>" />
+
+        <variable
+            name="textError"
+            type="Integer" />
+
+        <variable
+            name="hint"
+            type="String" />
+
+        <variable
+            name="inputType"
+            type="Integer" />
+
+        <variable
+            name="enable"
+            type="Boolean" />
+
+        <variable
+            name="length"
+            type="Integer" />
+
+        <variable
+            name="image"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.bilalqwatly.test.utils.widgets.MyTextInputLayout
+            android:id="@+id/til_general"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="@{!enable}"
+            android:focusable="@{!enable}"
+            android:focusableInTouchMode="@{!enable}"
+            android:hint="@{hint}"
+            android:textColorHint="@color/color_CDCDCD_66"
+            android:textSize="@dimen/font_16"
+            app:endIconMode='@{inputType == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD) ? 1 : 0}'
+            app:endIconTint="@color/color_CDCDCD_66"
+            app:errorIconDrawable="@null"
+            app:hintTextColor="@color/color_CDCDCD_66"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:onError="@{textError}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_edit_text"
+                style="@style/TextInputLayout_Poppins_R_16_FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:alpha="@{enable ? 0.5f : 1f}"
+                android:backgroundTint="@android:color/transparent"
+                android:clickable="@{!enable}"
+                android:cursorVisible="@{!enable}"
+                android:enabled="@{!enable}"
+                android:focusable="@{!enable}"
+                android:focusableInTouchMode="@{!enable}"
+                android:gravity="center|start"
+                android:inputType="@{inputType}"
+                android:maxLength="@{length != null &amp;&amp; length != 0 ? length : 265}"
+                android:padding="@dimen/spacing_xs"
+                android:text="@={text}"
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/color_CDCDCD"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+        </com.bilalqwatly.test.utils.widgets.MyTextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

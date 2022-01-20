@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.InputType" />
+
+        <variable
+            name="viewModel"
+            type="com.bilalqwatly.test.presentation.ui.auth.verification.VerificationViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:enableAllViews="@{!viewModel.isLoading}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/spacing_medium"
+                android:paddingEnd="@dimen/spacing_medium"
+                tools:context=".presentation.ui.auth.login.LoginActivity">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    style="@style/Text_Arial_32_FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_radius_xl_color_white_10"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_large"
+                    android:text="@string/app_name"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/spacing_margin"
+                    android:src="@drawable/logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    style="@style/Text_Poppins_R_16_CDCDCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xl"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="@{() -> viewModel.goBack()}"
+                    android:paddingStart="@dimen/spacing_medium"
+                    android:paddingTop="@dimen/spacing_small"
+                    android:paddingEnd="@dimen/spacing_medium"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:text="@string/back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.legacy.widget.Space
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xxl"
+                    app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+                <TextView
+                    android:id="@+id/textview2"
+                    style="@style/Text_Acme_32_FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verification"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/space" />
+
+                <TextView
+                    android:id="@+id/tv_resend_code"
+                    style="@style/Text_Poppins_M_16_0C6F86"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_margin"
+                    android:onClick="@{() -> viewModel.sendVerificationCode()}"
+                    android:paddingHorizontal="@dimen/spacing_small"
+                    android:paddingVertical="@dimen/spacing_xs"
+                    android:text="@string/resend_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/space" />
+
+                <TextView
+                    android:id="@+id/textview3"
+                    style="@style/Text_Poppins_R_14_CDCDCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text="@string/enter_the_digits_code"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview2" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutForm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview3">
+
+                    <com.mukesh.OtpView
+                        android:id="@+id/otp_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="@={viewModel.code}"
+                        android:textColor="@color/color_CDCDCD"
+                        app:OtpCursorColor="@color/color_CDCDCD"
+                        app:OtpItemCount="6"
+                        app:OtpItemSpacing="@dimen/spacing_small"
+                        app:OtpLineColor="@color/color_CDCDCD"
+                        app:OtpState_filled="false"
+                        app:OtpViewType="line"
+                        app:otpCompletion="@{viewModel.isComplete}" />
+
+                </LinearLayout>
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/btn_continue"
+                    style="@style/AuthButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxl"
+                    android:alpha="@{viewModel.code.length() == 6 ? 1f : 0.5f}"
+                    android:background="@drawable/bg_auth_button"
+                    android:onClick="@{() -> viewModel.sendVerificationCode()}"
+                    android:text="@string/_continue"
+                    app:buttonLoading="@{viewModel.isLoadingButton}"
+                    app:finalCornerAngle="@dimen/radius_72"
+                    app:initialCornerAngle="@dimen/radius_11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutForm"
+                    app:spinning_bar_color="@color/color_FFFFFF"
+                    app:spinning_bar_padding="@dimen/_4sdp"
+                    app:spinning_bar_width="@dimen/_2sdp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_background_loading"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+                <include
+                    layout="@layout/layout_loading"
+                    app:viewModel="@{viewModel}" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

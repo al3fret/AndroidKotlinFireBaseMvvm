@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AndoridTestBilalQwatly" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_FFFFFF</item>
+        <item name="colorPrimaryVariant">@color/color_FFFFFF</item>
+        <item name="colorOnPrimary">@color/color_FFFFFF</item>
+        <item name="colorControlHighlight">@color/color_CDCDCD_20</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/color_070014</item>
+        <item name="android:navigationBarColor">@color/color_070014</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/color_070014_72</item>
+        <item name="windowNoTitle">true</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent
+        </item>
+    </style>
+
+
+    <!-- Splash Theme -->
+    <style name="SplashTheme" parent="Theme.AndoridTestBilalQwatly">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+
+    <!-- Text Style-->
+    <style name="MyTextStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:background">@drawable/bg_ripple_text</item>
+    </style>
+
+
+    <!-- Poppins -->
+    <style name="Text_Poppins_R_16_CDCDCD" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_CDCDCD</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text_Poppins_R_14_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextInputLayout_Poppins_R_16_FFFFFF" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text_Poppins_R_12_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_12</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text_Poppins_R_14_CDCDCD" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_CDCDCD</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text_Poppins_M_18_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_18</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Text_Poppins_R_18_A10707" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_A10707</item>
+        <item name="android:textSize">@dimen/font_18</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text_Poppins_M_16_0C6F86" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_0C6F86</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <style name="Text_Poppins_R_16_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="Text_Poppins_M_16_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+    <!-- Acme -->
+    <style name="Text_Acme_32_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_32</item>
+        <item name="fontFamily">@font/acme_regular</item>
+    </style>
+    <!-- color_6F6E7D -->
+    <style name="Text_Poppins_R_12_A10707" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_A10707</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!-- Arial -->
+    <style name="Text_Arial_32_FFFFFF" parent="MyTextStyle">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">@dimen/font_32</item>
+        <item name="fontFamily">@font/arial_black</item>
+    </style>
+
+
+    <!-- Material Text Input Layout -->
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">0.5dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_11</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_11</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_11</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_11</item>
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+    </style>
+
+
+    <!-- Buttons -->
+    <style name="AuthButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_18</item>
+        <item name="android:textColor">@color/color_CDCDCD</item>
+        <item name="cornerRadius">@dimen/radius_11</item>
+        <item name="backgroundTint">@color/color_0C6F86</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/spacing_small</item>
+        <item name="android:paddingBottom">@dimen/spacing_small</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="SelectButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="cornerRadius">@dimen/radius_8</item>
+        <item name="backgroundTint">@color/color_CDCDCD_20</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/spacing_xs</item>
+        <item name="android:paddingBottom">@dimen/spacing_xs</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Bilal Qwatly Test</string>
+
+    <string name="data_base_error">DataBase Error</string>
+
+
+    <!-- Strings related to Auth -->
+    <string name="back">Back</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="login">Login</string>
+    <string name="user_name">User Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="country_code">Code</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="verification">Verification</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="enter_the_digits_code">Enter the 6-digits code sent to your mobile number.</string>
+    <string name="_continue">Continue</string>
+    <string name="invalid_otp">Invalid OTP</string>
+
+    <!-- Strings related to Exit popup -->
+    <string name="warning">Warning</string>
+    <string name="end">End</string>
+    <string name="are_you_sure_you_want_to_end_this_process">Are you sure you want to end this process?</string>
+
+
+    <!-- Strings related to Validation -->
+    <string name="password_must_be_at_least_6_characters">Password must be at least 8 characters long</string>
+    <string name="mobile_number_must_between_4_to_14">Mobile Number must between 4 to 14</string>
+
+    <string name="email_address_not_valid">Email Address Not Valid </string>
+    <string name="error_not_match">Two passwords do not match</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="add_record">Add Record</string>
+    <string name="save_record">Save Record</string>
+    <string name="get_all_record">Get All Record</string>
+    <string name="save_state_to_firebase">Save state to FireBase</string>
+    <string name="get_state_from_firebase">Get state from firebase</string>
+    <string name="add_office">Add Office</string>
+    <string name="name">Name</string>
+    <string name="meeting_rooms">Meeting Rooms</string>
+    <string name="add_meeting_room">Add Meeting Room</string>
+    <string name="works_days">Works Days</string>
+    <string name="add">Add</string>
+    <string name="periods">Periods</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_from">Select From</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="date">Date</string>
+    <string name="set_date">Set Date</string>
+    <string name="set_from">Set From</string>
+    <string name="set_to">Set To</string>
+    <string name="select_valid_rang_time">Select valid rang time</string>
+    <string name="select_from_before">Select From Before</string>
+    <string name="please_fill_all_input">Please fill all input</string>
+    <string name="meeting_room_added_successfully">Meeting room added successfully</string>
+    <string name="meeting_room_will_added_after_reconnect_to_network">Meeting room will added after reconnect to network</string>
+    <string name="book_an_appointment">Book an appointment</string>
+    <string name="book">Book</string>
+    <string name="meeting_room">Meeting Room</string>
+    <string name="work_day">Work Day</string>
+    <string name="period">Period</string>
+    <string name="booking_added_successfully">Booking Added Successfully</string>
+    <string name="booking_will_added_after_reconnect_to_network">Booking will added after reconnect to network</string>
+
+
+</resources>

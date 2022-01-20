@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bilalqwatly.test.presentation.ui.main.MainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:orientation="vertical"
+        tools:context=".presentation.ui.main.MainActivity">
+
+
+        <ImageView
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btn_add_meeting_room"
+                style="@style/AuthButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_auth_button"
+                android:gravity="center"
+                android:onClick="@{ ()-> viewModel.addMeetingRoom()}"
+                android:text="@string/add_meeting_room"
+                app:finalCornerAngle="@dimen/radius_72"
+                app:initialCornerAngle="@dimen/radius_11"
+                app:spinning_bar_color="@color/color_FFFFFF"
+                app:spinning_bar_padding="@dimen/_4sdp"
+                app:spinning_bar_width="@dimen/_2sdp" />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btn_book_an_appointment"
+                style="@style/AuthButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/bg_auth_button"
+                android:gravity="center"
+                android:onClick="@{ ()-> viewModel.bookAnAppointment()}"
+                android:text="@string/book_an_appointment"
+                app:finalCornerAngle="@dimen/radius_72"
+                app:initialCornerAngle="@dimen/radius_11"
+                app:spinning_bar_color="@color/color_FFFFFF"
+                app:spinning_bar_padding="@dimen/_4sdp"
+                app:spinning_bar_width="@dimen/_2sdp" />
+
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btn_save_record"
+                style="@style/AuthButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/bg_auth_button"
+                android:gravity="center"
+                android:onClick="@{ ()-> viewModel.saveRecord()}"
+                android:text="@string/save_record"
+                app:finalCornerAngle="@dimen/radius_72"
+                app:initialCornerAngle="@dimen/radius_11"
+
+                app:spinning_bar_color="@color/color_FFFFFF"
+                app:spinning_bar_padding="@dimen/_4sdp"
+                app:spinning_bar_width="@dimen/_2sdp" />
+
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btn_get_all_record"
+                style="@style/AuthButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/bg_auth_button"
+                android:gravity="center"
+                android:onClick="@{ ()-> viewModel.getAllRecords()}"
+                android:text="@string/get_all_record"
+                app:finalCornerAngle="@dimen/radius_72"
+                app:initialCornerAngle="@dimen/radius_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_save_record"
+                app:spinning_bar_color="@color/color_FFFFFF"
+                app:spinning_bar_padding="@dimen/_4sdp"
+                app:spinning_bar_width="@dimen/_2sdp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

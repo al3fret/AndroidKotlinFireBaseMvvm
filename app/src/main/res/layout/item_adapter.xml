@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.bilalqwatly.test.data.model.Item" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/Text_Poppins_M_16_FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginVertical="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="@null"
+            android:gravity="center|start"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="@{data.content}"
+            android:textAlignment="viewStart"
+            android:visibility="visible"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:drawableEndCompat="@drawable/ic_arrow_season_spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
