@@ -1,7 +1,6 @@
 package com.bilalqwatly.test.presentation.di
 
 import com.bilalqwatly.test.data.repository.AppRepositoryImpl
-import com.bilalqwatly.test.data.repository.datasource.LocalDataSource
 import com.bilalqwatly.test.data.repository.datasource.RemoteDataSource
 import com.bilalqwatly.test.domain.repository.AppRepository
 
@@ -20,10 +19,9 @@ class AppRepositoryModule {
     @Singleton
     @Provides
     fun providesAppRepository(
-        localDataSource: LocalDataSource,
         remoteDataSource: RemoteDataSource
     ): AppRepository {
-        return AppRepositoryImpl(localDataSource, remoteDataSource)
+        return AppRepositoryImpl( remoteDataSource)
     }
 
 }

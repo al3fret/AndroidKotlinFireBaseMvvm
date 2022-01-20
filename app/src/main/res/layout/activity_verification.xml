@@ -85,18 +85,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/space" />
 
-                <TextView
-                    android:id="@+id/tv_resend_code"
-                    style="@style/Text_Poppins_M_16_0C6F86"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_margin"
-                    android:onClick="@{() -> viewModel.sendVerificationCode()}"
-                    android:paddingHorizontal="@dimen/spacing_small"
-                    android:paddingVertical="@dimen/spacing_xs"
-                    android:text="@string/resend_code"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/space" />
 
                 <TextView
                     android:id="@+id/textview3"

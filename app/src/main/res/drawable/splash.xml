@@ -3,7 +3,7 @@
 
 
 
-    <item android:drawable="@drawable/bilal_logo"
+    <item android:drawable="@drawable/logo"
         android:width="@dimen/_240sdp"
         android:height="@dimen/_240sdp"
         android:gravity="center"/>

@@ -1,7 +1,6 @@
 package com.bilalqwatly.test.presentation.di
 
 import com.bilalqwatly.test.data.preferences.SharedPreferencesManager
-import com.bilalqwatly.test.data.repository.datasource.LocalDataSource
 import com.bilalqwatly.test.data.repository.datasource.RemoteDataSource
 import com.bilalqwatly.test.data.repository.datasourcelmpl.RemoteDataSourceImpl
 import dagger.Module
@@ -20,9 +19,8 @@ class RemoteDataModule {
     @Provides
     fun providesRemoteDataSource(
         sharedPreferences: SharedPreferencesManager,
-        localDataSource: LocalDataSource
     ): RemoteDataSource {
-        return RemoteDataSourceImpl(sharedPreferences, localDataSource)
+        return RemoteDataSourceImpl(sharedPreferences)
     }
 
 }

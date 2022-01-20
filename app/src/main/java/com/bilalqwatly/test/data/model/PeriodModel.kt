@@ -10,7 +10,7 @@ data class PeriodModel(
     var to: String? = "",
     val isAvailable: Boolean? = true
 ) : Serializable, Item() {
-    override var isEnable: Boolean = isAvailable == true
+    override var isEnable: Boolean = true
 
     override val id: Int
         get() = 0

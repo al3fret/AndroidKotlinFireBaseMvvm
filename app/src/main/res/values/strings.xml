@@ -19,6 +19,7 @@
     <string name="enter_the_digits_code">Enter the 6-digits code sent to your mobile number.</string>
     <string name="_continue">Continue</string>
     <string name="invalid_otp">Invalid OTP</string>
+    <string name="logout">Logout</string>
 
     <!-- Strings related to Exit popup -->
     <string name="warning">Warning</string>
@@ -29,17 +30,13 @@
     <!-- Strings related to Validation -->
     <string name="password_must_be_at_least_6_characters">Password must be at least 8 characters long</string>
     <string name="mobile_number_must_between_4_to_14">Mobile Number must between 4 to 14</string>
-
     <string name="email_address_not_valid">Email Address Not Valid </string>
     <string name="error_not_match">Two passwords do not match</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_field_required">This field is required</string>
-    <string name="add_record">Add Record</string>
-    <string name="save_record">Save Record</string>
-    <string name="get_all_record">Get All Record</string>
-    <string name="save_state_to_firebase">Save state to FireBase</string>
-    <string name="get_state_from_firebase">Get state from firebase</string>
-    <string name="add_office">Add Office</string>
+
+
+    <!-- Strings related to Meeting Room -->
     <string name="name">Name</string>
     <string name="meeting_rooms">Meeting Rooms</string>
     <string name="add_meeting_room">Add Meeting Room</string>
@@ -59,6 +56,8 @@
     <string name="please_fill_all_input">Please fill all input</string>
     <string name="meeting_room_added_successfully">Meeting room added successfully</string>
     <string name="meeting_room_will_added_after_reconnect_to_network">Meeting room will added after reconnect to network</string>
+
+    <!-- Strings related to Booking  -->
     <string name="book_an_appointment">Book an appointment</string>
     <string name="book">Book</string>
     <string name="meeting_room">Meeting Room</string>
@@ -66,6 +65,7 @@
     <string name="period">Period</string>
     <string name="booking_added_successfully">Booking Added Successfully</string>
     <string name="booking_will_added_after_reconnect_to_network">Booking will added after reconnect to network</string>
+    <string name="are_you_sure_you_want_logout">Are you sure you want to logout?</string>
 
 
 </resources>

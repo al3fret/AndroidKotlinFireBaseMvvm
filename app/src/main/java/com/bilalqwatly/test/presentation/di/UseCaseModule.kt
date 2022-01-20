@@ -14,17 +14,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class UseCaseModule {
 
-    @Singleton
-    @Provides
-    fun providesSaveRecordUseCase(appRepository: AppRepository): SaveRecordUseCase {
-        return SaveRecordUseCase(appRepository)
-    }
 
-    @Singleton
-    @Provides
-    fun providesGetAllRecordsUseCase(appRepository: AppRepository): GetAllRecordsUseCase {
-        return GetAllRecordsUseCase(appRepository)
-    }
 
     @Singleton
     @Provides
@@ -44,10 +34,5 @@ class UseCaseModule {
         return GetMeetingRoomFromFirebaseUseCase(appRepository)
     }
 
-    @Singleton
-    @Provides
-    fun providesGetAllRecordsOfAParticularContactUseCase(appRepository: AppRepository): GetAllRecordsOfAParticularContactUseCase {
-        return GetAllRecordsOfAParticularContactUseCase(appRepository)
-    }
 
 }

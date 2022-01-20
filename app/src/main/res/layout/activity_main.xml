@@ -20,8 +20,8 @@
 
 
         <ImageView
-            android:layout_width="@dimen/_75sdp"
-            android:layout_height="@dimen/_75sdp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_gravity="center"
             android:padding="@dimen/_10sdp"
             android:src="@drawable/logo" />
@@ -67,9 +67,8 @@
                 app:spinning_bar_padding="@dimen/_4sdp"
                 app:spinning_bar_width="@dimen/_2sdp" />
 
-
             <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
-                android:id="@+id/btn_save_record"
+                android:id="@+id/btn_logout"
                 style="@style/AuthButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,32 +76,10 @@
                 android:layout_marginTop="@dimen/spacing_large"
                 android:background="@drawable/bg_auth_button"
                 android:gravity="center"
-                android:onClick="@{ ()-> viewModel.saveRecord()}"
-                android:text="@string/save_record"
+                android:onClick="@{ ()-> viewModel.logout()}"
+                android:text="@string/logout"
                 app:finalCornerAngle="@dimen/radius_72"
                 app:initialCornerAngle="@dimen/radius_11"
-
-                app:spinning_bar_color="@color/color_FFFFFF"
-                app:spinning_bar_padding="@dimen/_4sdp"
-                app:spinning_bar_width="@dimen/_2sdp" />
-
-
-            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
-                android:id="@+id/btn_get_all_record"
-                style="@style/AuthButtonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/spacing_large"
-                android:background="@drawable/bg_auth_button"
-                android:gravity="center"
-                android:onClick="@{ ()-> viewModel.getAllRecords()}"
-                android:text="@string/get_all_record"
-                app:finalCornerAngle="@dimen/radius_72"
-                app:initialCornerAngle="@dimen/radius_11"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btn_save_record"
                 app:spinning_bar_color="@color/color_FFFFFF"
                 app:spinning_bar_padding="@dimen/_4sdp"
                 app:spinning_bar_width="@dimen/_2sdp" />

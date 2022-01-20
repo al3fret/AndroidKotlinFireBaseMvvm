@@ -1,10 +1,7 @@
 package com.bilalqwatly.test.data.repository.datasourcelmpl
 
-import android.util.Log
 import com.bilalqwatly.test.data.model.AppointmentModel
-import com.bilalqwatly.test.data.model.StateModel
 import com.bilalqwatly.test.data.preferences.SharedPreferencesManager
-import com.bilalqwatly.test.data.repository.datasource.LocalDataSource
 import com.bilalqwatly.test.data.repository.datasource.RemoteDataSource
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -15,14 +12,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import com.bilalqwatly.test.data.model.MeetingRoomModel as MeetingRoomModel
-import com.google.firebase.database.DatabaseReference
 
 
 // Class defining the functionality to the methods described in the [RemoteDataSource.kt] interface.
 class RemoteDataSourceImpl(
-    private val session: SharedPreferencesManager,
-    private val localDataSource: LocalDataSource
-) : RemoteDataSource {
+    private val session: SharedPreferencesManager) : RemoteDataSource {
 
     companion object {
         private const val KEY_MEETING_ROOMS = "MEETING_ROOMS"
